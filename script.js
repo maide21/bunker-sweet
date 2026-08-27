@@ -22,4 +22,3 @@ Por favor, confírmame el total de la orden para concretar el pago. ¡Gracias!`;
     const urlWhatsApp = `https://whatsapp.com{telefonoComercial}&text=${encodeURIComponent(textoMensaje)}`;
     window.open(urlWhatsApp, '_blank');
 }
-
