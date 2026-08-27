@@ -1,25 +1,97 @@
-function enviarPedidoWhatsApp(idTarjeta) {
-    const telefonoComercial = "584242311038";
-    const tarjeta = document.getElementById(idTarjeta);
-    
-    if (!tarjeta) {
-        console.error("Error: No se encontró la tarjeta " + idTarjeta);
-        return;
-    }
-
-    const nombreDulce = tarjeta.getAttribute("data-nombre");
-    const presentacion = tarjeta.querySelector(".select-presentacion").value;
-    const saborRelleno = tarjeta.querySelector(".select-relleno").value;
-    
-    const textoMensaje = `¡Hola, Maide! Vi tu Menú Digital y quiero ordenar:
-━━━━━━━━━━━━━━━━━━━━
-📌 *Dulce:* ${nombreDulce}
-📦 *Presentación:* ${presentacion}
-🍫 *Detalles/Rellenos:* ${saborRelleno}
-━━━━━━━━━━━━━━━━━━━━
-Por favor, confírmame el total de la orden para concretar el pago. ¡Gracias!`;
-
-    const urlWhatsApp = `https://whatsapp.com{telefonoComercial}&text=${encodeURIComponent(textoMensaje)}`;
-    window.open(urlWhatsApp, '_blank');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+body {
+    background-color: #fcf8f2;
+    color: #4a3728;
+    padding: 20px;
+}
+.menu-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+.menu-header h1 {
+    font-size: 2.5rem;
+    color: #d2691e;
+}
+.menu-header p {
+    font-size: 1rem;
+    color: #8b5a2b;
+    margin-top: 5px;
+}
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.producto-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0e2d3;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.card-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ff4500;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+.producto-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    color: #3e2723;
+}
+.producto-card .descripcion {
+    font-size: 0.9rem;
+    color: #795548;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #5d4037;
+}
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc1b6;
+    background-color: #faf6f0;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: #4e342e;
+    outline: none;
+}
+.btn-pedido {
+    width: 100%;
+    padding: 12px;
+    background-color: #25d366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: auto;
+    transition: background-color 0.2s ease;
+}
+.btn-pedido:hover {
+    background-color: #128c7e;
+}
