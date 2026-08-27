@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Interactivo | Búnker Sweet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="menu-header">
+        <h1>🍩 Búnker Sweet 🍰</h1>
+        <p>Dulces Artesanales desde La Guaira</p>
+    </header>
+
+    <main class="menu-container">
+
+        <!-- 1. OBLEAS GOURMET -->
+        <div class="producto-card" id="prod-obleas" data-nombre="Obleas Gourmet">
+            <div class="card-badge">Top Ventas</div>
+            <h3>Obleas Gourmet 🧇</h3>
+            <p class="descripcion">Crujientes, preparadas al momento con rellenos premium.</p>
+            
+            <label for="pres-obleas">Presentación:</label>
+            <select id="pres-obleas" class="select-presentacion">
+                <option value="Unidad Simple">Unidad Simple</option>
+                <option value="Combo x3">Combo x3 (Promoción)</option>
+                <option value="Varias unidades">Varias (Especificar cantidad al chat)</option>
+                <option value="Tamaño Familiar">Tamaño Familiar</option>
+            </select>
+
+            <label for="rell-obleas">Sabor / Relleno:</label>
+            <select id="rell-obleas" class="select-relleno">
+                <option value="Arequipe">Solo Arequipe</option>
+                <option value="Chocolate">Solo Chocolate</option>
+                <option value="Arequipe + Chocolate">Duo: Arequipe + Chocolate</option>
+                <option value="Arequipe + Oreo desmoronada">Arequipe + Oreo desmoronada</option>
+                <option value="Chocolate + Maní">Chocolate + Maní</option>
+            </select>
+
+            <button class="btn-pedido" onclick="enviarPedidoWhatsApp('prod-obleas')">Pedir por WhatsApp 🚀</button>
+        </div>
+
+        <!-- 2. BOMBITAS TRI-RELLENAS -->
+        <div class="producto-card" id="prod-bombitas" data-nombre="Bombitas Tri-Rellenas">
+            <h3>Bombitas Tri-Rellenas 🧁</h3>
+            <p class="descripcion">Súper esponjosas, rellenas de punta a punta.</p>
+            
+            <label for="pres-bombitas">Presentación:</label>
+            <select id="pres-bombitas" class="select-presentacion">
+                <option value="Unidad">Unidad Individual</option>
+                <option value="Dúo (x2)">Dúo (2 unidades)</option>
+                <option value="Trío (x3)">Trío (3 unidades)</option>
+                <option value="Bandeja x6">Bandeja de 6 unidades</option>
+            </select>
+
+            <label for="rell-bombitas">Combinación:</label>
+            <select id="rell-bombitas" class="select-relleno">
+                <option value="Arequipe, Chocolate y Crema Pastelera">Arequipe, Chocolate y Crema Pastelera</option>
+            </select>
+
+            <button class="btn-pedido" onclick="enviarPedidoWhatsApp('prod-bombitas')">Pedir por WhatsApp 🚀</button>
+        </div>
+
+        <!-- 3. MILHOJAS PREMIUM -->
+        <div class="producto-card" id="prod-milhojas" data-nombre="Milhojas Premium">
+            <h3>Milhojas Premium 🍰</h3>
+            <p class="descripcion">Hojaldre perfecto con capas crujientes y combinaciones irresistibles.</p>
+            
+            <label for="pres-milhojas">Presentación:</label>
+            <select id="pres-milhojas" class="select-presentacion">
+                <option value="Porción Individual">Porción Individual</option>
+                <option value="Dúo (x2)">Dúo (2 porciones)</option>
+                <option value="Trío (x3)">Trío (3 porciones)</option>
+                <option value="Familiar grande">Tamaño Familiar</option>
+            </select>
+
+            <label for="rell-milhojas">Topping / Relleno:</label>
+            <select id="rell-milhojas" class="select-relleno">
+                <option value="Crema Pastelera Tradicional">Crema Pastelera Tradicional</option>
+                <option value="Fudge de Chocolate">Fudge de Chocolate</option>
+                <option value="Mixta (Pastelera + Chocolate)">Mixta (Crema Pastelera + Chocolate)</option>
+            </select>
+
+            <button class="btn-pedido" onclick="enviarPedidoWhatsApp('prod-milhojas')">Pedir por WhatsApp 🚀</button>
+        </div>
+
+    </main>
+
+    <footer class="menu-footer">
+        <p>© 2026 Búnker Sweet. Desarrollado por Maide Laya.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
